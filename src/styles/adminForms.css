@@ -1,0 +1,558 @@
+/* Shared admin create/edit form modals */
+.modal-overlay.dashboard-form-overlay,
+.modal-overlay.user-form-overlay,
+.modal-overlay.task-form-overlay {
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(5px);
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+}
+
+.dashboard-form-dialog,
+.user-form-dialog,
+.task-form-dialog,
+.create-project-dialog {
+  margin: auto;
+  max-width: min(1080px, calc(100vw - 4rem));
+  max-height: calc(100vh - 4rem);
+  overflow: hidden;
+  width: 100%;
+}
+
+.dashboard-form-modal,
+.user-form-modal,
+.task-form-modal,
+.project-create-modal {
+  background: #ffffff;
+  border: 1px solid rgba(200, 214, 228, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 22px 54px rgba(15, 23, 42, 0.24);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 4rem);
+  overflow: hidden;
+  width: 100%;
+}
+
+.dashboard-form,
+.user-form,
+.task-form {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.dashboard-form-header,
+.user-form-header,
+.task-form-header,
+.project-create-header {
+  align-items: flex-start;
+  background: #ffffff;
+  border-bottom: 0;
+  flex-shrink: 0;
+  gap: 1rem;
+  padding: 1.8rem 2.5rem 1.25rem;
+}
+
+.dashboard-form-header .modal-title,
+.user-form-header .modal-title,
+.task-form-header .modal-title,
+.project-create-header .modal-title {
+  color: #102033;
+  font-size: 1.38rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.dashboard-form-header .modal-close-btn,
+.user-form-close,
+.task-form-close,
+.project-create-header .modal-close-btn {
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #d7e2ee;
+  border-radius: 12px;
+  color: #64748b;
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 40px;
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+}
+
+.dashboard-form-header .modal-close-btn:hover,
+.user-form-close:hover,
+.task-form-close:hover,
+.project-create-header .modal-close-btn:hover {
+  background: #eef6ff;
+  border-color: #a9cbe8;
+  color: #102033;
+}
+
+.dashboard-form-body,
+.user-form-body,
+.task-form-body,
+.project-create-modal .modal-body {
+  background: #ffffff;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1.15rem 2.5rem 2.25rem;
+}
+
+.dashboard-form-grid.row,
+.task-form-grid.row {
+  display: grid;
+  gap: 1.45rem 1.6rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin: 0;
+}
+
+.dashboard-form-grid > [class*="col-"],
+.task-form-grid > [class*="col-"] {
+  flex: none;
+  margin: 0 !important;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.dashboard-form-grid > .col-md-12,
+.task-form-grid > .col-md-12 {
+  grid-column: span 12;
+}
+
+.dashboard-form-grid > .col-md-6,
+.task-form-grid > .col-md-6 {
+  grid-column: span 6;
+}
+
+.dashboard-form-grid > .col-md-4,
+.task-form-grid > .col-md-4 {
+  grid-column: span 4;
+}
+
+.dashboard-form-grid > .col-md-3,
+.task-form-grid > .col-md-3 {
+  grid-column: span 3;
+}
+
+.dashboard-form .form-label,
+.project-create-modal .form-label,
+.user-form-grid .form-label,
+.task-form-grid .form-label {
+  color: #08213d;
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.6rem;
+}
+
+.dashboard-form .form-control,
+.dashboard-form .form-select,
+.project-create-modal .form-control,
+.project-create-modal .form-select,
+.task-form-grid .form-control,
+.task-form-grid .form-select {
+  background-color: #ffffff;
+  border: 1px solid #bfd1e4;
+  border-radius: 14px;
+  color: #1f2937;
+  font-size: 0.95rem;
+  min-height: 54px;
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+}
+
+.dashboard-form textarea.form-control,
+.project-create-modal textarea.form-control,
+.task-form-grid textarea.form-control {
+  line-height: 1.5;
+  min-height: 104px;
+  resize: vertical;
+}
+
+.dashboard-form .form-control:focus,
+.dashboard-form .form-select:focus,
+.project-create-modal .form-control:focus,
+.project-create-modal .form-select:focus,
+.task-form-grid .form-control:focus,
+.task-form-grid .form-select:focus {
+  background-color: #ffffff;
+  border-color: #159cef;
+  box-shadow: 0 0 0 3px rgba(21, 156, 239, 0.12);
+  outline: 0;
+}
+
+.dashboard-form .invalid-feedback,
+.project-create-modal .invalid-feedback,
+.task-form-grid .invalid-feedback {
+  color: #ef4444;
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin-top: 0.45rem;
+}
+
+.dashboard-form .image-upload-section,
+.user-form .image-upload-section {
+  margin-bottom: 1.55rem !important;
+}
+
+.dashboard-form .document-upload-area,
+.task-document-field .document-upload-area,
+.project-create-modal .document-upload-area {
+  align-items: center;
+  background: #f8fbff;
+  border: 1px dashed #9fc7e9;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 116px;
+  padding: 1.35rem;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-form .document-upload-area:hover,
+.task-document-field .document-upload-area:hover,
+.project-create-modal .document-upload-area:hover {
+  background: #f2f9ff;
+  border-color: #159cef;
+  box-shadow: 0 0 0 3px rgba(21, 156, 239, 0.08);
+}
+
+.dashboard-form .document-upload-area p,
+.task-document-field .document-upload-area p,
+.project-create-modal .document-upload-area p {
+  color: #102033;
+  font-weight: 700;
+  margin: 0.45rem 0 0.15rem;
+}
+
+.dashboard-form .document-upload-area span,
+.task-document-field .document-upload-area span,
+.project-create-modal .document-upload-area span {
+  color: #64748b;
+  font-size: 0.86rem;
+}
+
+.dashboard-form .upload-icon-large,
+.task-document-field .upload-icon-large,
+.project-create-modal .upload-icon-large {
+  color: #159cef;
+  font-size: 2rem;
+  margin-bottom: 0.15rem;
+}
+
+.dashboard-form .skills-input-row,
+.dashboard-form .agenda-input-row {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.dashboard-form .skills-input-row .btn,
+.dashboard-form .agenda-input-row .btn {
+  border-radius: 12px;
+  min-height: 54px;
+  min-width: 68px;
+}
+
+
+
+.dashboard-form .projects-select-grid,
+.dashboard-form .participants-select-grid,
+.project-create-modal .team-members-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.project-create-modal .team-members-grid {
+  align-content: start;
+  background: #f8fbff;
+  border: 1px solid #c8d6e4;
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  max-height: clamp(190px, 30vh, 260px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0.85rem;
+  scrollbar-gutter: stable;
+}
+
+
+
+.dashboard-form .project-chip,
+.dashboard-form .participant-chip,
+.project-create-modal .team-member-chip,
+.dashboard-form .skill-tag-removable,
+.dashboard-form .agenda-chip {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #c8d6e4;
+  border-radius: 999px;
+  color: #334155;
+  display: inline-flex;
+  font-size: 0.86rem;
+  font-weight: 700;
+  gap: 0.35rem;
+  min-height: 36px;
+  padding: 0.45rem 0.85rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.project-create-modal .team-members-grid .team-member-chip {
+  border-radius: 12px;
+  justify-content: flex-start;
+  min-height: 44px;
+  padding: 0.58rem 0.8rem;
+  text-align: left;
+  width: 100%;
+}
+
+.dashboard-form .project-chip.selected,
+.dashboard-form .participant-chip.selected,
+.project-create-modal .team-member-chip.selected {
+  background: #159cef;
+  border-color: #159cef;
+  color: #ffffff;
+}
+
+.dashboard-form-footer,
+.user-form-footer,
+.task-form-footer,
+.project-create-footer {
+  background: #f8fbff;
+  border-top: 1px solid rgba(200, 214, 228, 0.9);
+  box-shadow: 0 -10px 24px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-shrink: 0;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1.25rem 2.5rem 1.45rem;
+}
+
+.dashboard-form-footer .btn,
+.user-form-footer .btn,
+.task-form-footer .btn,
+.project-create-footer .btn {
+  align-items: center;
+  border-radius: 12px;
+  display: inline-flex;
+  font-size: 0.94rem;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 52px;
+  min-width: 150px;
+  padding: 0.78rem 1.35rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard-form-footer .btn-light,
+.user-form-footer .btn-light,
+.task-form-footer .btn-light,
+.project-create-footer .btn-light {
+  background: #ffffff;
+  border: 1px solid #c8d6e4;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
+  color: #102033;
+}
+
+.dashboard-form-footer .btn-light:hover,
+.user-form-footer .btn-light:hover,
+.task-form-footer .btn-light:hover,
+.project-create-footer .btn-light:hover {
+  background: #f1f5f9;
+  border-color: #8fa5bb;
+  color: #0f172a;
+}
+
+.dashboard-form-footer .btn-primary,
+.user-form-footer .btn-primary,
+.task-form-footer .btn-primary,
+.project-create-footer .btn-primary {
+  background: #159cef;
+  border-color: transparent;
+  box-shadow: 0 10px 22px rgba(21, 156, 239, 0.28);
+  color: #ffffff;
+}
+
+.dashboard-form-footer .btn-primary:hover,
+.user-form-footer .btn-primary:hover,
+.task-form-footer .btn-primary:hover,
+.project-create-footer .btn-primary:hover {
+  box-shadow: 0 12px 26px rgba(21, 156, 239, 0.34);
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+  .dashboard-form-dialog,
+  .user-form-dialog,
+  .task-form-dialog,
+  .create-project-dialog {
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 2rem);
+    width: calc(100vw - 2rem);
+  }
+
+  .dashboard-form-modal,
+  .user-form-modal,
+  .task-form-modal,
+  .project-create-modal {
+    max-height: calc(100vh - 2rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dashboard-form-header,
+  .user-form-header,
+  .task-form-header,
+  .project-create-header {
+    padding: 1.25rem 1.35rem 1rem;
+  }
+
+  .dashboard-form-body,
+  .user-form-body,
+  .task-form-body,
+  .project-create-modal .modal-body {
+    padding: 1rem 1.35rem 1.45rem;
+  }
+
+  .dashboard-form-grid.row,
+  .task-form-grid.row,
+  .project-form-grid,
+  .user-form-grid {
+    gap: 1.15rem;
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-form-grid > [class*="col-"],
+  .task-form-grid > [class*="col-"],
+  .project-form-grid .form-group,
+  .project-form-grid .full-width,
+  .form-field-half,
+  .form-field-third,
+  .form-field-full {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-form-footer,
+  .user-form-footer,
+  .task-form-footer,
+  .project-create-footer {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+    padding: 1.1rem 1.35rem 1.3rem;
+  }
+
+  .dashboard-form-footer .btn,
+  .user-form-footer .btn,
+  .task-form-footer .btn,
+  .project-create-footer .btn {
+    width: 100%;
+  }
+
+  .dashboard-form .skills-input-row,
+  .dashboard-form .agenda-input-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modal-overlay.dashboard-form-overlay,
+  .modal-overlay.user-form-overlay,
+  .modal-overlay.task-form-overlay {
+    padding: 0.75rem;
+  }
+
+  .dashboard-form-dialog,
+  .user-form-dialog,
+  .task-form-dialog,
+  .create-project-dialog {
+    margin: 0 auto;
+    max-width: calc(100vw - 1.5rem);
+    width: calc(100vw - 1.5rem);
+  }
+
+  .dashboard-form-header .modal-title,
+  .user-form-header .modal-title,
+  .task-form-header .modal-title,
+  .project-create-header .modal-title {
+    font-size: 1.08rem;
+  }
+
+  .dashboard-form-body,
+  .user-form-body,
+  .task-form-body,
+  .project-create-modal .modal-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+/* Shared working file upload field */
+.file-upload-field {
+  width: 100%;
+}
+
+.file-upload-input {
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 1px;
+}
+
+.file-upload-area {
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  width: 100%;
+}
+
+.file-upload-area.has-file {
+  background: rgba(21, 156, 239, 0.06);
+  border-color: var(--primary-color);
+}
+
+.file-upload-preview {
+  border-radius: 12px;
+  height: 72px;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+  width: 72px;
+}
+
+.file-upload-clear {
+  align-items: center;
+  color: var(--danger-color);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 600;
+  gap: 0.25rem;
+  margin-top: 0.65rem;
+}
+
+.file-upload-error {
+  color: var(--danger-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
+}

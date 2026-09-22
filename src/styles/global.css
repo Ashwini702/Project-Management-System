@@ -1,0 +1,18 @@
+/* src/styles/global.css (optional - create if needed) */
+/* Global reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--background-color);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}

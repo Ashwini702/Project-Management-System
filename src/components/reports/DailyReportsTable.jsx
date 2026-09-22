@@ -1,0 +1,3 @@
+import React from 'react';
+const DailyReportsTable = ({ reports = [] }) => <div className="table-responsive bg-white rounded p-3"><table className="table align-middle"><thead><tr><th>Team Member</th><th>Date</th><th>Project</th><th>Title</th><th>Status</th><th>Summary</th></tr></thead><tbody>{reports.length === 0 ? <tr><td colSpan="6" className="text-center text-muted py-4">No daily reports submitted.</td></tr> : reports.map(r => <tr key={r.id}><td>{r.user_name || `User #${r.user_id}`}</td><td>{r.report_date || '—'}</td><td>{r.project_name || '—'}</td><td>{r.report_title || '—'}</td><td>{r.status || '—'}</td><td>{r.work_summary || r.completed_work || '—'}</td></tr>)}</tbody></table></div>;
+export default DailyReportsTable;

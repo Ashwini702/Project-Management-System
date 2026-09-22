@@ -1,0 +1,150 @@
+/* src/styles/managerTasks.css */
+.mt-dash-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.mt-dash-header h3 { font-weight: 700; color: var(--text-dark); }
+.mt-dash-header p { color: var(--text-muted); margin: 0; }
+
+.mt-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.mt-stat-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; transition: all 0.3s; cursor: pointer; }
+.mt-stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.mt-stat-content { display: flex; align-items: center; gap: 0.75rem; }
+.mt-stat-icon-wrapper { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+.mt-stat-primary .mt-stat-icon-wrapper { background: rgba(21,156,239,0.1); } .mt-stat-primary .mt-stat-icon { color: var(--primary-color); }
+.mt-stat-warning .mt-stat-icon-wrapper { background: rgba(245,158,11,0.1); } .mt-stat-warning .mt-stat-icon { color: var(--warning-color); }
+.mt-stat-info .mt-stat-icon-wrapper { background: rgba(58,172,241,0.1); } .mt-stat-info .mt-stat-icon { color: var(--secondary-color); }
+.mt-stat-purple .mt-stat-icon-wrapper { background: rgba(170,124,206,0.1); } .mt-stat-purple .mt-stat-icon { color: var(--accent-purple); }
+.mt-stat-success .mt-stat-icon-wrapper { background: rgba(16,185,129,0.1); } .mt-stat-success .mt-stat-icon { color: var(--success-color); }
+.mt-stat-danger .mt-stat-icon-wrapper { background: rgba(239,68,68,0.1); } .mt-stat-danger .mt-stat-icon { color: var(--danger-color); }
+.mt-stat-icon { font-size: 1.25rem; }
+.mt-stat-info h3 { font-size: 1.5rem; font-weight: 700; margin: 0; }
+.mt-stat-info p { font-size: 0.8rem; margin: 0; color: var(--text-dark); font-weight: 600; }
+.mt-stat-info span { font-size: 0.7rem; color: var(--text-muted); }
+
+.filter-section { margin-bottom: 1.5rem; }
+.filter-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.search-box { position: relative; flex: 1; min-width: 200px; }
+.search-box .search-icon { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
+.search-box .search-input { padding-left: 2.5rem; height: 42px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 0.85rem; }
+.filter-selects { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.filter-selects .form-select { height: 42px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 0.85rem; min-width: 130px; cursor: pointer; }
+.reset-btn { height: 42px; border-radius: 10px; border: 1px solid var(--border-color); font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; }
+.view-toggle { display: flex; border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; }
+.toggle-btn { padding: 0.5rem 0.85rem; border: none; background: var(--white-color); color: var(--text-muted); cursor: pointer; font-size: 1rem; display: flex; align-items: center; }
+.toggle-btn.active { background: var(--primary-color); color: var(--white-color); }
+
+.mt-tasks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.25rem; }
+.mt-task-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; transition: all 0.3s; }
+.mt-task-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.mt-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem; }
+.mt-card-header h6 { font-weight: 700; margin: 0; }
+.mt-card-badges { display: flex; gap: 0.4rem; }
+.mt-card-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.mt-card-meta { display: flex; gap: 0.75rem; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+.mt-card-meta span { display: flex; align-items: center; gap: 0.3rem; }
+.mt-card-dates { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.mt-progress-label { display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 0.25rem; }
+.mt-progress { height: 8px; border-radius: 4px; background: var(--card-color); }
+.mt-card-stats { display: flex; gap: 0.75rem; font-size: 0.72rem; color: var(--text-muted); margin: 0.5rem 0; }
+.mt-card-actions { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.mt-btn { padding: 0.35rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--white-color); color: var(--primary-color); font-size: 0.7rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.2rem; }
+.mt-btn:hover { background: var(--primary-color); color: var(--white-color); }
+.mt-btn.complete { color: var(--success-color); }
+.mt-btn.complete:hover { background: var(--success-color); color: var(--white-color); }
+.mt-btn.delete { color: var(--danger-color); }
+.mt-btn.delete:hover { background: var(--danger-color); color: var(--white-color); }
+
+.mt-badge { padding: 0.25rem 0.6rem; border-radius: 20px; font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+.mt-status-pending { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.mt-status-progress { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+.mt-status-review { background: rgba(170,124,206,0.1); color: var(--accent-purple); }
+.mt-status-completed { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.mt-status-reopened { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.mt-status-blocked { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+.mt-status-cancelled { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+.mt-priority-low { background: rgba(90,186,243,0.1); color: var(--light-blue); }
+.mt-priority-medium { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.mt-priority-high { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+.mt-priority-urgent { background: rgba(170,124,206,0.1); color: var(--accent-purple); }
+
+.mt-table-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; }
+.mt-table { margin-bottom: 0; font-size: 0.8rem; }
+.mt-table thead th { background: var(--card-color); padding: 0.6rem; font-size: 0.72rem; white-space: nowrap; }
+.mt-table tbody td { padding: 0.6rem; vertical-align: middle; }
+.mt-name { font-weight: 600; color: var(--text-dark); }
+.mini-progress { width: 60px; height: 6px; background: var(--card-color); border-radius: 3px; display: inline-block; vertical-align: middle; overflow: hidden; }
+.mini-progress-bar { height: 100%; border-radius: 3px; background: var(--primary-color); }
+.action-buttons { display: flex; gap: 0.3rem; }
+.action-btn-icon { width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--white-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.75rem; }
+.action-btn-icon:hover { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+.complete-btn:hover { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.delete-btn:hover { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+
+/* Kanban */
+.mt-kanban { display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 1rem; }
+.mt-kanban-col { min-width: 280px; max-width: 350px; flex: 1; background: var(--card-color); border-radius: 12px; padding: 1rem; }
+.mt-kanban-header { display: flex; justify-content: space-between; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color); }
+.mt-kanban-header h6 { font-weight: 700; margin: 0; font-size: 0.9rem; }
+.mt-kanban-count { background: var(--primary-color); color: var(--white-color); padding: 0.1rem 0.5rem; border-radius: 10px; font-size: 0.7rem; }
+.mt-kanban-cards { display: flex; flex-direction: column; gap: 0.5rem; }
+.mt-kanban-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 0.75rem; cursor: pointer; transition: all 0.2s; }
+.mt-kanban-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.mt-kc-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
+.mt-kc-meta { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+.mt-kc-meta span { display: flex; align-items: center; gap: 0.25rem; }
+.mt-kc-footer { display: flex; justify-content: space-between; align-items: center; }
+
+/* Checklist */
+.mt-checklist h6 { font-weight: 700; margin-bottom: 0.75rem; }
+.mt-check-items { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.75rem; }
+.mt-check-row { display: flex; align-items: center; gap: 0.5rem; }
+.mt-check-row.completed span { text-decoration: line-through; color: var(--text-muted); }
+.mt-check-toggle { width: 22px; height: 22px; border-radius: 4px; border: 2px solid var(--border-color); background: var(--white-color); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; }
+.mt-check-toggle.checked { background: var(--success-color); border-color: var(--success-color); color: var(--white-color); }
+.mt-check-delete { background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0; }
+.mt-check-row:hover .mt-check-delete { opacity: 1; }
+.mt-check-delete:hover { color: var(--danger-color); }
+.mt-check-add { display: flex; gap: 0.5rem; }
+
+/* Discussion */
+.mt-discussion h6 { font-weight: 700; margin-bottom: 0.75rem; }
+.mt-disc-list { max-height: 250px; overflow-y: auto; margin-bottom: 0.75rem; }
+.mt-disc-item { display: flex; gap: 0.6rem; margin-bottom: 0.75rem; }
+.mt-disc-avatar { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--primary-color), var(--accent-purple)); color: var(--white-color); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.7rem; flex-shrink: 0; }
+.mt-disc-body { flex: 1; }
+.mt-disc-header { display: flex; gap: 0.5rem; font-size: 0.75rem; align-items: center; margin-bottom: 0.15rem; }
+.mt-disc-header strong { color: var(--text-dark); }
+.mt-disc-header span { color: var(--text-muted); }
+.mt-disc-time { font-size: 0.62rem !important; margin-left: auto; }
+.mt-disc-body p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+.mt-disc-input { display: flex; gap: 0.5rem; }
+
+/* Detail Modal */
+.mt-detail-badges { display: flex; gap: 0.5rem; }
+.mt-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.85rem; margin-top: 1rem; }
+.mt-detail-grid div { display: flex; align-items: center; gap: 0.5rem; }
+.mt-detail-grid svg { color: var(--primary-color); }
+
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1050; padding: 1rem; }
+.modal-dialog { width: 100%; max-height: 90vh; overflow-y: auto; }
+.modal-content { background: var(--white-color); border: none; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.modal-header { padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; }
+.modal-title { font-size: 1.25rem; font-weight: 700; margin: 0; }
+.modal-close-btn { background: none; border: none; font-size: 1.25rem; color: var(--text-muted); cursor: pointer; }
+.modal-body { padding: 1.5rem; }
+.modal-footer { padding: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 0.75rem; }
+.delete-info { background: var(--card-color); padding: 1rem; border-radius: 8px; margin-top: 0.5rem; text-align: center; }
+
+@media (max-width: 991px) {
+  .mt-tasks-grid { grid-template-columns: 1fr; }
+  .filter-row { flex-direction: column; align-items: stretch; }
+  .mt-detail-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .mt-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .mt-kanban { flex-direction: column; }
+  .mt-kanban-col { min-width: 100%; max-width: 100%; }
+}
+@media (max-width: 575px) {
+  .mt-stats-grid { grid-template-columns: 1fr; }
+  .filter-selects { flex-direction: column; }
+  .filter-selects .form-select { min-width: 100%; }
+}

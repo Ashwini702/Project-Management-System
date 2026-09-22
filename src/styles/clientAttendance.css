@@ -1,0 +1,50 @@
+.client-attendance-page { display: flex; flex-direction: column; gap: 1.25rem; }
+.client-attendance-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.client-attendance-header h3 { margin: 0 0 .35rem; font-weight: 800; color: var(--text-dark); }
+.client-attendance-header p { margin: 0; color: var(--text-muted); }
+.client-attendance-actions { display: flex; gap: .65rem; }
+.client-attendance-actions .btn { display: inline-flex; align-items: center; gap: .45rem; min-width: 118px; justify-content: center; }
+.client-attendance-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.client-attendance-stats article { display: flex; align-items: center; gap: .9rem; background: var(--white-color); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.1rem; }
+.client-attendance-stats .icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px; font-size: 1.2rem; }
+.client-attendance-stats .icon.primary { color: var(--primary-color); background: rgba(21,156,239,.12); }
+.client-attendance-stats .icon.success { color: var(--success-color); background: rgba(16,185,129,.12); }
+.client-attendance-stats .icon.warning { color: var(--warning-color); background: rgba(245,158,11,.12); }
+.client-attendance-stats strong, .client-attendance-stats small { display: block; }
+.client-attendance-stats strong { color: var(--text-dark); font-size: 1.35rem; }
+.client-attendance-stats small { color: var(--text-muted); }
+.client-today-attendance { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; background: linear-gradient(135deg, rgba(21,156,239,.08), rgba(170,124,206,.08)); border: 1px solid rgba(21,156,239,.2); border-radius: 14px; padding: 1.15rem; }
+.client-today-attendance div { display: flex; flex-direction: column; gap: .25rem; }
+.client-today-attendance small { color: var(--text-muted); }
+.client-today-attendance strong { color: var(--text-dark); }
+.status-pill { display: inline-flex; align-items: center; width: fit-content; padding: .28rem .65rem; border-radius: 999px; font-size: .75rem; font-weight: 700; }
+.status-pill.present { background: rgba(16,185,129,.12); color: var(--success-color); }
+.status-pill.pending { background: rgba(245,158,11,.12); color: var(--warning-color); }
+.client-attendance-table-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; }
+.table-card-heading { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.25rem; border-bottom: 1px solid var(--border-color); }
+.table-card-heading h5 { margin: 0; font-weight: 750; }
+.table-card-heading span { color: var(--text-muted); font-size: .8rem; }
+.client-attendance-table-card th { color: var(--text-muted); font-size: .78rem; background: var(--card-color); }
+.client-attendance-table-card td { color: var(--text-dark); font-size: .86rem; }
+@media (max-width: 767px) { .client-attendance-header { flex-direction: column; } .client-attendance-actions { width: 100%; } .client-attendance-actions .btn { flex: 1; } .client-attendance-stats { grid-template-columns: 1fr; } .client-today-attendance { grid-template-columns: repeat(2, 1fr); } }
+.evidence-links { display: flex; flex-wrap: wrap; gap: .4rem; }
+.evidence-links a { display: inline-flex; align-items: center; gap: .25rem; padding: .25rem .45rem; border-radius: 7px; background: rgba(21,156,239,.09); color: var(--primary-color); text-decoration: none; font-size: .72rem; font-weight: 700; }
+.attendance-capture-overlay { position: fixed !important; inset: 0 !important; z-index: 99999 !important; display: flex !important; align-items: center; justify-content: center; padding: 1rem; background: rgba(15,23,42,.72); overflow-y: auto; }
+.attendance-capture-modal { width: min(620px, 100%); max-height: 92vh; overflow-y: auto; background: var(--white-color); border-radius: 18px; box-shadow: 0 24px 70px rgba(15,23,42,.28); }
+.attendance-capture-modal > header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.4rem; border-bottom: 1px solid var(--border-color); }
+.attendance-capture-modal header h4 { margin: 0 0 .25rem; font-weight: 800; }
+.attendance-capture-modal header p { margin: 0; color: var(--text-muted); font-size: .86rem; }
+.attendance-capture-modal header button { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--border-color); border-radius: 10px; background: var(--white-color); color: var(--text-muted); }
+.attendance-capture-body { padding: 1.3rem 1.4rem; }
+.location-proof { display: flex; align-items: center; gap: .75rem; padding: .85rem; margin-bottom: 1rem; border: 1px solid var(--border-color); border-radius: 12px; background: var(--card-color); color: var(--text-muted); }
+.location-proof.ready { color: var(--success-color); border-color: rgba(16,185,129,.35); background: rgba(16,185,129,.07); }
+.location-proof > svg { flex: 0 0 auto; font-size: 1.35rem; }
+.location-proof div { display: flex; flex-direction: column; }
+.location-proof span { margin-top: .15rem; color: var(--text-muted); font-size: .75rem; }
+.camera-proof { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 14px; background: #0f172a; }
+.camera-proof video, .camera-proof img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scaleX(-1); }
+.camera-loading { position: absolute; inset: 0; display: grid; place-items: center; color: white; background: rgba(15,23,42,.65); }
+.capture-controls { display: flex; justify-content: center; margin-top: 1rem; }
+.capture-controls .btn, .attendance-capture-modal footer .btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; }
+.attendance-capture-modal > footer { display: flex; justify-content: flex-end; gap: .75rem; padding: 1rem 1.4rem; border-top: 1px solid var(--border-color); background: var(--card-color); border-radius: 0 0 18px 18px; }
+@media (max-width: 575px) { .attendance-capture-modal > header, .attendance-capture-body, .attendance-capture-modal > footer { padding-left: 1rem; padding-right: 1rem; } .attendance-capture-modal > footer .btn { flex: 1; } }

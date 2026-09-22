@@ -1,0 +1,200 @@
+/* src/styles/clientInvoices.css */
+.cinv-dash-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.cinv-dash-header h3 { font-weight: 700; color: var(--text-dark); }
+.cinv-dash-header p { color: var(--text-muted); margin: 0; }
+.cinv-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.cinv-stat-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; transition: all 0.3s; cursor: pointer; }
+.cinv-stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.cinv-stat-content { display: flex; align-items: center; gap: 0.75rem; }
+.cinv-stat-icon-wrapper { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+.cinv-stat-primary .cinv-stat-icon-wrapper { background: rgba(21,156,239,0.1); } .cinv-stat-primary .cinv-stat-icon { color: var(--primary-color); }
+.cinv-stat-success .cinv-stat-icon-wrapper { background: rgba(16,185,129,0.1); } .cinv-stat-success .cinv-stat-icon { color: var(--success-color); }
+.cinv-stat-warning .cinv-stat-icon-wrapper { background: rgba(245,158,11,0.1); } .cinv-stat-warning .cinv-stat-icon { color: var(--warning-color); }
+.cinv-stat-danger .cinv-stat-icon-wrapper { background: rgba(239,68,68,0.1); } .cinv-stat-danger .cinv-stat-icon { color: var(--danger-color); }
+.cinv-stat-info .cinv-stat-icon-wrapper { background: rgba(58,172,241,0.1); } .cinv-stat-info .cinv-stat-icon { color: var(--secondary-color); }
+.cinv-stat-purple .cinv-stat-icon-wrapper { background: rgba(170,124,206,0.1); } .cinv-stat-purple .cinv-stat-icon { color: var(--accent-purple); }
+.cinv-stat-icon { font-size: 1.25rem; }
+.cinv-stat-info h3 { font-size: 1.5rem; font-weight: 700; margin: 0; }
+.cinv-stat-info p { font-size: 0.8rem; margin: 0; color: var(--text-dark); font-weight: 600; }
+.cinv-stat-info span { font-size: 0.7rem; color: var(--text-muted); }
+
+.filter-section { margin-bottom: 1rem; }
+.filter-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.search-box { position: relative; flex: 1; min-width: 200px; }
+.search-box .search-icon { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
+.search-box .search-input { padding-left: 2.5rem; height: 42px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 0.85rem; }
+.filter-selects { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.filter-selects .form-select { height: 42px; border: 1px solid var(--border-color); border-radius: 10px; font-size: 0.85rem; min-width: 150px; cursor: pointer; }
+.reset-btn { height: 42px; border-radius: 10px; border: 1px solid var(--border-color); font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; }
+.view-toggle { display: flex; gap: 0.5rem; }
+.toggle-btn { padding: 0.5rem 0.85rem; border: 1px solid var(--border-color); border-radius: 10px; background: var(--white-color); color: var(--text-muted); cursor: pointer; font-size: 1rem; display: flex; align-items: center; }
+.toggle-btn.active { background: var(--primary-color); color: var(--white-color); border-color: var(--primary-color); }
+
+.cinv-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.25rem; }
+.cinv-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; transition: all 0.3s; }
+.cinv-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.cinv-card.overdue { border-left: 4px solid var(--danger-color); }
+.cinv-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.4rem; }
+.cinv-card-header h6 { font-weight: 700; color: var(--primary-color); margin: 0; }
+.cinv-card-badges { display: flex; gap: 0.4rem; }
+.cinv-card-project { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+.cinv-card-dates { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.cinv-card-amounts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3rem; text-align: center; margin-bottom: 0.5rem; }
+.cinv-card-amounts div span { display: block; font-size: 0.65rem; color: var(--text-muted); }
+.cinv-card-amounts div strong { font-size: 0.82rem; }
+.cinv-card-progress { margin-bottom: 0.5rem; }
+.cinv-card-progress .progress { height: 8px; border-radius: 4px; background: var(--card-color); }
+.cinv-card-progress small { font-size: 0.65rem; color: var(--text-muted); }
+.cinv-card-actions { display: flex; gap: 0.3rem; }
+.cinv-btn { flex: 1; padding: 0.35rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--white-color); color: var(--primary-color); font-size: 0.7rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.2rem; }
+.cinv-btn:hover { background: var(--primary-color); color: var(--white-color); }
+.cinv-btn.pay { color: var(--success-color); }
+.cinv-btn.pay:hover { background: var(--success-color); color: var(--white-color); }
+
+.cinv-badge { padding: 0.25rem 0.6rem; border-radius: 20px; font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+.cinv-status-generated { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+.cinv-status-sent { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.cinv-status-viewed { background: rgba(170,124,206,0.1); color: var(--accent-purple); }
+.cinv-status-cancelled { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+.cinv-pay-paid { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.cinv-pay-pending { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.cinv-pay-partial { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+.cinv-pay-overdue { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+
+.cinv-table-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; }
+.cinv-table { margin-bottom: 0; font-size: 0.78rem; }
+.cinv-table thead th { background: var(--card-color); padding: 0.5rem; font-size: 0.7rem; white-space: nowrap; }
+.cinv-table tbody td { padding: 0.5rem; vertical-align: middle; }
+.cinv-table tbody tr.row-overdue { background: rgba(239,68,68,0.03); }
+.cinv-name { font-weight: 600; color: var(--text-dark); }
+.action-buttons { display: flex; gap: 0.2rem; }
+.action-btn-icon { width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--white-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.72rem; }
+.action-btn-icon:hover { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+
+.cinv-billing-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.cinv-bs-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; text-align: center; }
+.cinv-bs-card h6 { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+.cinv-bs-card h3 { font-weight: 700; margin: 0; font-size: 1.4rem; }
+.cinv-proj-billing { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; margin-bottom: 0.75rem; }
+.cinv-pb-header { display: flex; justify-content: space-between; margin-bottom: 0.3rem; }
+.cinv-pb-header span { font-weight: 600; }
+.cinv-pb-amounts { display: flex; gap: 0.75rem; font-size: 0.72rem; margin-bottom: 0.4rem; }
+.cinv-pb-amounts span { font-weight: 500; }
+
+.cinv-payment-history { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; }
+.cinv-payment-history h6 { font-weight: 700; margin-bottom: 1rem; }
+
+.cinv-detail-badges { display: flex; gap: 0.5rem; }
+.cinv-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.85rem; }
+.cinv-detail-grid div { display: flex; align-items: center; gap: 0.5rem; }
+
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1050; padding: 1rem; }
+.modal-dialog { width: 100%; max-height: 90vh; overflow-y: auto; }
+.modal-content { background: var(--white-color); border: none; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.modal-header { padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; }
+.modal-title { font-size: 1.25rem; font-weight: 700; margin: 0; }
+.modal-close-btn { background: none; border: none; font-size: 1.25rem; color: var(--text-muted); cursor: pointer; }
+.modal-body { padding: 1.5rem; }
+.modal-footer { padding: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 0.75rem; }
+
+@media (max-width: 991px) { .cinv-cards-grid { grid-template-columns: 1fr; } .cinv-billing-summary { grid-template-columns: repeat(2, 1fr); } .filter-row { flex-direction: column; align-items: stretch; } }
+@media (max-width: 767px) { .cinv-stats-grid { grid-template-columns: repeat(2, 1fr); } .cinv-billing-summary { grid-template-columns: 1fr; } }
+@media (max-width: 575px) { .cinv-stats-grid { grid-template-columns: 1fr; } .filter-selects { flex-direction: column; } .filter-selects .form-select { min-width: 100%; } }
+
+/* Invoice detail modal: scoped styles prevent global modal rules from making it transparent. */
+.cinv-modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 3000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+  background: rgba(15, 23, 42, 0.58) !important;
+}
+.cinv-details-dialog {
+  width: min(720px, 100%) !important;
+  max-height: 90vh !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+.cinv-details-modal {
+  display: flex !important;
+  flex-direction: column !important;
+  max-height: 90vh !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  color: #172b4d !important;
+  background: #ffffff !important;
+  border: 1px solid #d7e3f4 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.32) !important;
+}
+.cinv-details-modal .modal-header,
+.cinv-details-modal .modal-footer {
+  flex: 0 0 auto;
+  opacity: 1 !important;
+  background: #ffffff !important;
+}
+.cinv-details-modal .modal-body {
+  overflow-y: auto !important;
+  opacity: 1 !important;
+  background: #ffffff !important;
+}
+/* Clear spacing for the invoice detail content. */
+.cinv-details-modal .modal-header {
+  min-height: 78px !important;
+  padding: 22px 28px !important;
+}
+.cinv-details-modal .modal-title {
+  margin: 0 !important;
+  font-size: 1.45rem !important;
+  font-weight: 750 !important;
+}
+.cinv-details-modal .modal-body {
+  padding: 24px 28px 28px !important;
+}
+.cinv-details-modal .cinv-detail-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.cinv-details-modal .cinv-detail-grid {
+  gap: 16px 42px !important;
+  padding: 20px !important;
+  margin: 0 !important;
+  border: 1px solid #dbe7f5;
+  border-radius: 12px;
+  background: #f8fbff;
+  font-size: 1rem !important;
+}
+.cinv-details-modal .cinv-detail-grid div {
+  min-height: 24px;
+  gap: 9px !important;
+}
+.cinv-details-modal .cinv-detail-grid strong,
+.cinv-details-modal .modal-body > p strong {
+  color: #142b4d;
+}
+.cinv-details-modal .modal-body > p {
+  margin: 22px 0 0 !important;
+  line-height: 1.65;
+  font-size: 1rem;
+}
+.cinv-details-modal .modal-footer {
+  gap: 12px !important;
+  padding: 18px 28px 20px !important;
+  border-top: 1px solid #dbe7f5 !important;
+}
+.cinv-details-modal .modal-footer .btn {
+  min-width: 132px;
+  min-height: 44px;
+}
+@media (max-width: 640px) {
+  .cinv-details-modal .modal-header,
+  .cinv-details-modal .modal-body,
+  .cinv-details-modal .modal-footer { padding-left: 18px !important; padding-right: 18px !important; }
+  .cinv-details-modal .cinv-detail-grid { grid-template-columns: 1fr !important; gap: 13px !important; padding: 16px !important; }
+  .cinv-details-modal .modal-footer .btn { min-width: 0; flex: 1 1 calc(50% - 8px); }
+}
+.cinv-message-dialog { width: min(560px, 100%) !important; margin: 0 !important; }

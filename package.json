@@ -1,0 +1,24 @@
+{
+  "name": "project-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "axios": "^1.18.1",
+    "bootstrap": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "latest",
+    "react-router-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.3.0"
+  }
+}

@@ -1,0 +1,155 @@
+.cf-alert {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.cf-alert-close {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  display: inline-flex;
+  font-size: 1.1rem;
+  margin-left: auto;
+  padding: 0.15rem;
+}
+
+
+
+
+
+
+.cf-download-btn,
+.cf-upload-modal .modal-footer .btn {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.4rem;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.cf-files-table th,
+.cf-files-table td {
+  vertical-align: middle;
+}
+
+.cf-file-name {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  min-width: 220px;
+}
+
+.cf-file-icon {
+  align-items: center;
+  background: #eef6ff;
+  border-radius: 8px;
+  color: #0d6efd;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.cf-recipient-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cf-recipient-cell small {
+  color: #667085;
+}
+
+.cf-status-badge {
+  align-items: center;
+  background: #eef2f7;
+  border-radius: 999px;
+  color: #475467;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.38rem 0.65rem;
+  width: fit-content;
+}
+
+.cf-status-badge.sent {
+  background: #e7f8ef;
+  color: #0f8a4b;
+}
+
+.cf-upload-dialog {
+  max-width: 880px;
+  width: min(880px, calc(100vw - 2rem));
+}
+
+.cf-upload-modal .modal-header h2 {
+  color: #1f2937;
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.cf-upload-modal .modal-header p {
+  color: #667085;
+  margin: 0.25rem 0 0;
+}
+
+.cf-form-grid {
+  display: grid;
+  gap: 1rem 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cf-upload-modal label {
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+
+.cf-upload-modal .form-control {
+  border: 1px solid #c8d7ea;
+  border-radius: 8px;
+  min-height: 48px;
+}
+
+.cf-upload-modal textarea.form-control {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.cf-upload-field .document-upload-area {
+  background: #f8fbff;
+  border-color: #b8d8f8;
+  border-radius: 8px;
+  min-height: 150px;
+}
+
+.cf-upload-field .document-upload-area p {
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.cf-upload-field .document-upload-area span {
+  color: #667085;
+}
+
+@media (max-width: 768px) {
+
+  .cf-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cf-upload-dialog {
+    width: calc(100vw - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+}
+

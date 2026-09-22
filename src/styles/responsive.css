@@ -1,0 +1,255 @@
+/* src/styles/responsive.css */
+html {
+  min-width: 0;
+}
+
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.admin-layout,
+.manager-layout,
+.team-layout,
+.client-layout,
+.main-content,
+.content,
+.page-content,
+.dashboard-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.card,
+[class$="-card"],
+[class*="-card "],
+[class*=" card-"],
+[class*="_card"] {
+  min-width: 0;
+}
+
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  vertical-align: middle;
+}
+
+.table th,
+.table td {
+  overflow-wrap: anywhere;
+}
+
+.filter-row,
+[class*="-dash-header"],
+[class*="-header-top"],
+[class*="-card-header"],
+.card-header-custom,
+.page-header {
+  min-width: 0;
+}
+
+.filter-selects,
+.action-buttons,
+[class*="-actions"],
+[class*="-btns"],
+[class*="-meta"] {
+  min-width: 0;
+}
+
+@media (max-width: 1199.98px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-row,
+  [class*="-dash-header"],
+  .page-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filter-selects {
+    width: 100%;
+  }
+
+  .filter-selects .form-select,
+  .filter-selects .form-control {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cards-grid,
+  .projects-grid,
+  .tasks-grid,
+  .clients-grid,
+  .meetings-grid,
+  .reports-grid,
+  .notifications-grid,
+  .backups-grid,
+  .permissions-grid,
+  .settings-grid,
+  .settings-grid-2col,
+  .export-grid,
+  .team-grid,
+  .members-grid,
+  .user-stats-grid,
+  .stats-grid,
+  .dashboard-grid,
+  [class$="-cards-grid"],
+  [class$="-projects-grid"],
+  [class$="-members-grid"],
+  [class$="-stats-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header-custom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .view-toggle {
+    width: 100%;
+  }
+
+  .view-toggle button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* Admin dashboard full-page responsive polish */
+.admin-dashboard-page {
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.admin-dashboard-page > .container-fluid,
+.admin-dashboard-page .row,
+.admin-dashboard-page [class^="col-"],
+.admin-dashboard-page [class*=" col-"] {
+  min-width: 0;
+}
+
+.admin-dashboard-page .card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.admin-dashboard-page .table-responsive {
+  border-radius: 0 0 18px 18px;
+  overflow-x: auto;
+}
+
+.admin-dashboard-page .table {
+  margin-bottom: 0;
+  min-width: 680px;
+}
+
+.admin-dashboard-page .progress {
+  min-width: 90px;
+}
+
+@media (max-width: 1199.98px) {
+  .admin-dashboard-page {
+    padding: 24px !important;
+  }
+
+  .admin-dashboard-header {
+    align-items: stretch !important;
+  }
+
+  .admin-dashboard-actions {
+    display: grid !important;
+    gap: 0.75rem !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .admin-dashboard-action-btn {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .admin-dashboard-page {
+    padding: 18px !important;
+  }
+
+  .admin-dashboard-page .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .admin-dashboard-header h2 {
+    font-size: 1.45rem;
+  }
+
+  .admin-dashboard-header p {
+    font-size: 0.9rem;
+  }
+
+  .admin-dashboard-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard-page .card-body,
+  .admin-dashboard-page .card-header {
+    padding: 1.1rem !important;
+  }
+
+  .admin-dashboard-page .card-body.pt-0 {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .admin-dashboard-page {
+    padding: 14px !important;
+  }
+
+  .admin-dashboard-page .row {
+    --bs-gutter-x: 0.9rem;
+    --bs-gutter-y: 0.9rem;
+  }
+
+  .admin-dashboard-page .card-body > .d-flex.align-items-center.gap-3 {
+    align-items: flex-start !important;
+  }
+
+  .admin-dashboard-action-btn {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,182 @@
+/* src/styles/budget.css */
+.bgt-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
+.bgt-stat-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; transition: all 0.3s ease; cursor: pointer; }
+.bgt-stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.bgt-stat-content { display: flex; align-items: flex-start; gap: 1rem; }
+.bgt-stat-icon-wrapper { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.bgt-stat-primary .bgt-stat-icon-wrapper { background: rgba(21,156,239,0.1); } .bgt-stat-primary .bgt-stat-icon { color: var(--primary-color); }
+.bgt-stat-danger .bgt-stat-icon-wrapper { background: rgba(239,68,68,0.1); } .bgt-stat-danger .bgt-stat-icon { color: var(--danger-color); }
+.bgt-stat-success .bgt-stat-icon-wrapper { background: rgba(16,185,129,0.1); } .bgt-stat-success .bgt-stat-icon { color: var(--success-color); }
+.bgt-stat-warning .bgt-stat-icon-wrapper { background: rgba(245,158,11,0.1); } .bgt-stat-warning .bgt-stat-icon { color: var(--warning-color); }
+.bgt-stat-info .bgt-stat-icon-wrapper { background: rgba(58,172,241,0.1); } .bgt-stat-info .bgt-stat-icon { color: var(--secondary-color); }
+.bgt-stat-purple .bgt-stat-icon-wrapper { background: rgba(170,124,206,0.1); } .bgt-stat-purple .bgt-stat-icon { color: var(--accent-purple); }
+.bgt-stat-icon { font-size: 1.5rem; }
+.bgt-stat-value { font-size: 1.75rem; font-weight: 700; color: var(--text-dark); margin: 0 0 0.25rem; }
+.bgt-stat-title { color: var(--text-dark); margin: 0 0 0.25rem; font-size: 0.9rem; font-weight: 600; }
+.bgt-stat-desc { font-size: 0.8rem; color: var(--text-muted); }
+
+.filter-section { margin-bottom: 1.5rem; }
+.filter-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.search-box { position: relative; flex: 1; min-width: 250px; }
+.search-box .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.1rem; }
+.search-box .search-input { padding-left: 2.75rem; height: 46px; border: 1px solid var(--border-color); border-radius: 12px; font-size: 0.9rem; }
+.filter-selects { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.filter-selects .form-select { height: 46px; border: 1px solid var(--border-color); border-radius: 12px; font-size: 0.9rem; min-width: 140px; cursor: pointer; }
+.reset-btn { height: 46px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; white-space: nowrap; }
+
+.view-toggle-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.view-btn-budget { padding: 0.6rem 1.2rem; border: 1px solid var(--border-color); border-radius: 10px; background: var(--white-color); color: var(--text-muted); font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; }
+.view-btn-budget:hover { border-color: var(--primary-color); color: var(--primary-color); }
+.view-btn-budget.active { background: var(--primary-color); color: var(--white-color); border-color: var(--primary-color); }
+
+.budget-overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.budget-overview-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.5rem; transition: all 0.3s; }
+.budget-overview-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.boc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.boc-header h6 { font-weight: 700; color: var(--text-dark); margin: 0; }
+.boc-client { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.boc-dates { display: flex; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+.boc-amounts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 0.75rem 0; text-align: center; }
+.boc-amounts div span { display: block; font-size: 0.72rem; color: var(--text-muted); }
+.boc-amounts div strong { font-size: 0.9rem; }
+.boc-pl { text-align: center; margin-bottom: 0.75rem; font-size: 0.85rem; }
+.boc-actions { display: flex; gap: 0.5rem; }
+.boc-btn { flex: 1; padding: 0.4rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--white-color); color: var(--primary-color); font-size: 0.78rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.25rem; transition: all 0.2s; }
+.boc-btn:hover { background: var(--primary-color); color: var(--white-color); border-color: var(--primary-color); }
+
+.budget-progress-wrapper { margin-bottom: 0.5rem; }
+.budget-progress { height: 8px; border-radius: 4px; background: var(--card-color); }
+.budget-progress-text { font-size: 0.72rem; color: var(--text-muted); display: block; text-align: right; margin-top: 0.2rem; }
+
+.budget-table-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.5rem; }
+.budget-table { margin-bottom: 0; }
+.budget-table thead th { background: var(--card-color); border-bottom: 2px solid var(--border-color); color: var(--text-dark); font-weight: 600; font-size: 0.82rem; padding: 0.75rem; white-space: nowrap; }
+.budget-table tbody td { padding: 0.75rem; vertical-align: middle; font-size: 0.85rem; color: var(--text-muted); }
+.budget-table tbody tr:hover { background: var(--card-color); }
+.bgt-name { font-weight: 600; color: var(--text-dark); }
+.action-buttons { display: flex; gap: 0.4rem; }
+.action-btn-icon { width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--white-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+.action-btn-icon:hover { transform: translateY(-2px); }
+.view-btn:hover { background: rgba(21,156,239,0.1); color: var(--primary-color); border-color: var(--primary-color); }
+.edit-btn:hover { background: rgba(16,185,129,0.1); color: var(--success-color); border-color: var(--success-color); }
+.complete-btn:hover { background: rgba(16,185,129,0.1); color: var(--success-color); border-color: var(--success-color); }
+.delete-btn:hover { background: rgba(239,68,68,0.1); color: var(--danger-color); border-color: var(--danger-color); }
+
+.budget-status-badge { padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+.bgt-paid { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.bgt-pending { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.bgt-partial { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+.bgt-overdue { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+.bgt-profit { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.bgt-loss { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+.bgt-under { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.bgt-near { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.bgt-over { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+
+.invoices-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.25rem; margin-bottom: 2rem; }
+.invoice-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; transition: all 0.3s; }
+.invoice-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.inv-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.inv-header h6 { font-weight: 700; color: var(--primary-color); margin: 0; }
+.inv-body p { margin-bottom: 0.25rem; font-size: 0.9rem; }
+.inv-project { color: var(--text-muted); font-size: 0.8rem; }
+.inv-dates { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin: 0.5rem 0; }
+.inv-amounts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; text-align: center; margin: 0.5rem 0; }
+.inv-amounts div span { display: block; font-size: 0.7rem; color: var(--text-muted); }
+.inv-amounts div strong { font-size: 0.85rem; }
+.inv-actions { display: flex; gap: 0.4rem; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--card-color); }
+.inv-btn { flex: 1; padding: 0.4rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--white-color); color: var(--text-muted); cursor: pointer; display: flex; justify-content: center; transition: all 0.2s; }
+.inv-btn:hover { background: var(--primary-color); color: var(--white-color); border-color: var(--primary-color); }
+
+.pl-summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 0.5rem; }
+.pl-summary-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; text-align: center; }
+.pl-summary-card h6 { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+.pl-summary-card h3 { font-size: 1.5rem; font-weight: 700; margin: 0; }
+
+.document-upload-area { border: 2px dashed var(--border-color); border-radius: 12px; padding: 1.5rem; text-align: center; background: var(--card-color); }
+.upload-icon-large { font-size: 2rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1050; padding: 1rem; }
+.modal-dialog { width: 100%; max-height: 90vh; overflow-y: auto; }
+.modal-content { background: var(--white-color); border: none; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.modal-header { padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; }
+.modal-title { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin: 0; }
+.modal-close-btn { background: none; border: none; font-size: 1.25rem; color: var(--text-muted); cursor: pointer; }
+.modal-body { padding: 1.5rem; }
+.modal-footer { padding: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 0.75rem; }
+.modal-footer .btn { padding: 0.625rem 1.5rem; border-radius: 10px; font-weight: 600; font-size: 0.9rem; }
+.delete-confirmation { text-align: center; }
+.delete-info { background: var(--card-color); padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+
+@media (max-width: 1199px) { .budget-overview-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 991px) { .budget-overview-grid { grid-template-columns: 1fr; } .invoices-grid { grid-template-columns: 1fr; } .filter-row { flex-direction: column; align-items: stretch; } }
+@media (max-width: 767px) { .boc-amounts { grid-template-columns: repeat(2, 1fr); } .pl-summary-grid { grid-template-columns: repeat(2, 1fr); } .view-toggle-buttons { overflow-x: auto; flex-wrap: nowrap; } }
+@media (max-width: 575px) { .filter-selects { flex-direction: column; } .filter-selects .form-select { min-width: 100%; } .inv-amounts { grid-template-columns: repeat(2, 1fr); } }
+/* Budget filter responsiveness fix */
+.budget-page .filter-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.budget-page .filter-row .search-box {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.budget-page .filter-row .search-input {
+  min-width: 0;
+  width: 100%;
+}
+
+.budget-page .filter-selects {
+  display: flex;
+  flex: 999 1 560px;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.budget-page .filter-selects .form-select {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+
+.budget-page .reset-btn {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  .budget-page .filter-row .search-box,
+  .budget-page .filter-selects,
+  .budget-page .filter-selects .form-select,
+  .budget-page .reset-btn {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .budget-page .reset-btn {
+    justify-content: center;
+  }
+}
+
+.budget-empty-state {
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  grid-column: 1 / -1;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+/* Scoped admin budget invoice details modal */
+.budget-invoice-view-overlay { z-index: 3000; background: rgba(15, 23, 42, .55); }
+.budget-invoice-view-modal { width: min(660px, calc(100vw - 2rem)); max-height: calc(100vh - 2rem); overflow: hidden; margin: 0; }
+.budget-invoice-view-modal .modal-content { background: #fff !important; border: 1px solid #d9e4f0; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 64px rgba(15, 23, 42, .3); }
+.budget-invoice-view-modal .modal-header { padding: 1.2rem 1.4rem; background: #fff; }
+.budget-invoice-view-modal .modal-body { padding: 1.35rem 1.4rem; background: #fff; color: #1d3557; }
+.budget-invoice-view-modal .modal-body p { margin: 0 0 .85rem; font-size: 1rem; line-height: 1.5; }
+.budget-invoice-view-modal .modal-body strong { color: #112a4d; display: inline-block; min-width: 92px; }
+.budget-invoice-view-modal .modal-footer { padding: 1rem 1.4rem; background: #f8fbff; }

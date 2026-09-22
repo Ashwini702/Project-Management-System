@@ -1,0 +1,49 @@
+// src/data/managerDeadlinesData.js
+export const deadlineStatsData = [
+  { id: 1, title: 'Total Deadlines', value: 38, icon: 'FiCalendar', desc: 'All tracked deadlines', color: 'primary' },
+  { id: 2, title: "Today's Deadlines", value: 5, icon: 'FiClock', desc: 'Due today', color: 'warning' },
+  { id: 3, title: 'This Week', value: 12, icon: 'FiTrendingUp', desc: 'Next 7 days', color: 'info' },
+  { id: 4, title: 'Overdue', value: 4, icon: 'FiAlertTriangle', desc: 'Past due date', color: 'danger' },
+  { id: 5, title: 'Completed', value: 15, icon: 'FiCheckCircle', desc: 'Finished on time', color: 'success' },
+  { id: 6, title: 'Urgent Deadlines', value: 6, icon: 'FiAlertCircle', desc: 'High priority', color: 'purple' }
+];
+
+export const deadlineTypes = ['Project Deadline', 'Task Deadline', 'Milestone', 'Meeting', 'Review', 'Delivery'];
+export const projectsForDeadlines = ['Website Redesign', 'Mobile App UI', 'CRM Development', 'ERP System', 'Cyber Security Audit', 'E-commerce Platform', 'Healthcare Portal'];
+export const tasksForDeadlines = ['Homepage UI', 'API Integration', 'Database Schema', 'User Auth Module', 'Payment Gateway', 'Security Audit', 'Inventory API', 'Navigation Design'];
+export const assigneesForDeadlines = ['Saurabh Nalode', 'David Thompson', 'Lisa Martinez', 'Mike Developer', 'Amanda Taylor', 'Robert Wilson', 'Security Expert', 'Thomas Wright'];
+
+export const deadlinesData = [
+  { id: 1, title: 'E-commerce Final Delivery', description: 'Complete delivery of the E-commerce Platform redesign project.', type: 'Project Deadline', project: 'E-commerce Platform', relatedTask: 'Homepage UI', assignee: 'Saurabh Nalode', dueDate: '2026-07-30', dueTime: '18:00', priority: 'High', status: 'Upcoming', progress: 68, reminder: '1 Day Before', daysRemaining: 37, createdDate: '2026-06-15', updatedDate: '2026-06-19', notes: 'Final delivery with all features completed.' },
+  { id: 2, title: 'API Payment Integration', description: 'Complete Stripe payment gateway integration with testing.', type: 'Task Deadline', project: 'E-commerce Platform', relatedTask: 'API Integration', assignee: 'David Thompson', dueDate: '2026-06-28', dueTime: '17:00', priority: 'Urgent', status: 'Upcoming', progress: 40, reminder: '1 Hour Before', daysRemaining: 5, createdDate: '2026-06-10', updatedDate: '2026-06-18', notes: 'Critical for launch.' },
+  { id: 3, title: 'User Auth Review', description: 'Complete review of user authentication module for CRM.', type: 'Review', project: 'CRM Development', relatedTask: 'User Auth Module', assignee: 'Saurabh Nalode', dueDate: '2026-06-20', dueTime: '14:00', priority: 'High', status: 'Overdue', progress: 90, reminder: '30 Minutes Before', daysRemaining: -3, createdDate: '2026-06-01', updatedDate: '2026-06-19', notes: 'Was due June 20. Review pending.' },
+  { id: 4, title: 'Design Phase Completion', description: 'Complete all UI/UX designs for Mobile App.', type: 'Milestone', project: 'Mobile App UI', relatedTask: 'Navigation Design', assignee: 'Lisa Martinez', dueDate: '2026-06-22', dueTime: '16:00', priority: 'Medium', status: 'Upcoming', progress: 85, reminder: '1 Day Before', daysRemaining: 0, createdDate: '2026-06-05', updatedDate: '2026-06-18', notes: 'Design review with client.' },
+  { id: 5, title: 'Sprint Planning Meeting', description: 'Weekly sprint planning for development team.', type: 'Meeting', project: 'Website Redesign', relatedTask: '', assignee: 'Priya Sharma', dueDate: '2026-06-23', dueTime: '10:00', priority: 'Medium', status: 'Upcoming', progress: 0, reminder: '30 Minutes Before', daysRemaining: 1, createdDate: '2026-06-19', updatedDate: '2026-06-19', notes: 'Plan next sprint tasks.' },
+  { id: 6, title: 'Security Patch Delivery', description: 'Deliver security patches for identified vulnerabilities.', type: 'Delivery', project: 'Cyber Security Audit', relatedTask: 'Security Audit', assignee: 'Security Expert', dueDate: '2026-06-15', dueTime: '12:00', priority: 'Urgent', status: 'Overdue', progress: 80, reminder: '10 Minutes Before', daysRemaining: -8, createdDate: '2026-06-05', updatedDate: '2026-06-15', notes: 'Critical patches overdue.' },
+  { id: 7, title: 'Database Optimization', description: 'Complete database schema optimization and indexing.', type: 'Task Deadline', project: 'Healthcare Portal', relatedTask: 'Database Schema', assignee: 'Thomas Wright', dueDate: '2026-06-30', dueTime: '18:00', priority: 'Medium', status: 'Upcoming', progress: 25, reminder: '1 Day Before', daysRemaining: 7, createdDate: '2026-06-14', updatedDate: '2026-06-18', notes: 'Performance improvement task.' },
+  { id: 8, title: 'Inventory API Delivery', description: 'Complete inventory management API for ERP.', type: 'Delivery', project: 'ERP System', relatedTask: 'Inventory API', assignee: 'Mike Developer', dueDate: '2026-07-05', dueTime: '17:00', priority: 'Medium', status: 'Upcoming', progress: 35, reminder: '2 Days Before', daysRemaining: 12, createdDate: '2026-06-08', updatedDate: '2026-06-17', notes: 'Includes CRUD operations.' },
+  { id: 9, title: 'UI Component Library', description: 'Complete reusable UI component library.', type: 'Milestone', project: 'E-commerce Platform', relatedTask: '', assignee: 'Lisa Martinez', dueDate: '2026-06-18', dueTime: '16:00', priority: 'High', status: 'Completed', progress: 100, reminder: 'No Reminder', daysRemaining: -5, createdDate: '2026-06-05', updatedDate: '2026-06-18', notes: 'Successfully completed.' },
+  { id: 10, title: 'Cross-Browser Testing', description: 'Complete cross-browser testing for all pages.', type: 'Task Deadline', project: 'Website Redesign', relatedTask: '', assignee: 'Amanda Taylor', dueDate: '2026-06-26', dueTime: '18:00', priority: 'High', status: 'Upcoming', progress: 15, reminder: '1 Day Before', daysRemaining: 3, createdDate: '2026-06-18', updatedDate: '2026-06-19', notes: 'Testing across Chrome, Firefox, Safari, Edge.' },
+  { id: 11, title: 'Client Feedback Review', description: 'Review client feedback on healthcare portal.', type: 'Review', project: 'Healthcare Portal', relatedTask: '', assignee: 'Priya Sharma', dueDate: '2026-06-24', dueTime: '15:00', priority: 'Medium', status: 'Upcoming', progress: 0, reminder: '1 Hour Before', daysRemaining: 2, createdDate: '2026-06-18', updatedDate: '2026-06-19', notes: 'Client provided detailed feedback.' },
+  { id: 12, title: 'Marketing Campaign Go-Live', description: 'Launch digital marketing campaign.', type: 'Milestone', project: 'Digital Marketing', relatedTask: '', assignee: 'Robert Wilson', dueDate: '2026-06-25', dueTime: '09:00', priority: 'Medium', status: 'Upcoming', progress: 60, reminder: '1 Day Before', daysRemaining: 3, createdDate: '2026-06-12', updatedDate: '2026-06-18', notes: 'Campaign launch date.' },
+  { id: 13, title: 'Code Review - Payment Module', description: 'Peer code review for payment gateway module.', type: 'Review', project: 'E-commerce Platform', relatedTask: 'Payment Gateway', assignee: 'David Thompson', dueDate: '2026-06-27', dueTime: '14:00', priority: 'High', status: 'Upcoming', progress: 0, reminder: '1 Hour Before', daysRemaining: 4, createdDate: '2026-06-19', updatedDate: '2026-06-19', notes: 'Review by senior developer.' },
+  { id: 14, title: 'ERP System Demo', description: 'Demo ERP system to client stakeholders.', type: 'Meeting', project: 'ERP System', relatedTask: '', assignee: 'Priya Sharma', dueDate: '2026-07-10', dueTime: '11:00', priority: 'High', status: 'Upcoming', progress: 0, reminder: '1 Day Before', daysRemaining: 17, createdDate: '2026-06-15', updatedDate: '2026-06-19', notes: 'Client demo with all modules.' },
+  { id: 15, title: 'Data Migration Completion', description: 'Complete legacy data migration to new system.', type: 'Task Deadline', project: 'ERP System', relatedTask: '', assignee: 'Thomas Wright', dueDate: '2026-07-02', dueTime: '18:00', priority: 'Urgent', status: 'Upcoming', progress: 30, reminder: '2 Days Before', daysRemaining: 9, createdDate: '2026-06-12', updatedDate: '2026-06-18', notes: 'Critical data migration task.' }
+];
+
+export const remindersData = [
+  { id: 1, title: 'API Payment Integration', relatedItem: 'E-commerce Platform', dueDate: '2026-06-28', reminderTime: '2026-06-27 09:00', assignedTo: 'David Thompson', priority: 'Urgent', status: 'Pending' },
+  { id: 2, title: 'User Auth Review', relatedItem: 'CRM Development', dueDate: '2026-06-20', reminderTime: '2026-06-19 14:00', assignedTo: 'Saurabh Nalode', priority: 'High', status: 'Sent' },
+  { id: 3, title: 'Design Phase Completion', relatedItem: 'Mobile App UI', dueDate: '2026-06-22', reminderTime: '2026-06-21 10:00', assignedTo: 'Lisa Martinez', priority: 'Medium', status: 'Pending' },
+  { id: 4, title: 'Cross-Browser Testing', relatedItem: 'Website Redesign', dueDate: '2026-06-26', reminderTime: '2026-06-25 09:00', assignedTo: 'Amanda Taylor', priority: 'High', status: 'Pending' }
+];
+
+export const overdueDeadlinesData = [
+  { id: 1, title: 'Security Patch Delivery', project: 'Cyber Security Audit', assignee: 'Security Expert', originalDueDate: '2026-06-15', overdueDays: 8, priority: 'Urgent', status: 'Overdue' },
+  { id: 2, title: 'User Auth Review', project: 'CRM Development', assignee: 'Saurabh Nalode', originalDueDate: '2026-06-20', overdueDays: 3, priority: 'High', status: 'Overdue' },
+  { id: 3, title: 'UI Component Library', project: 'E-commerce Platform', assignee: 'Lisa Martinez', originalDueDate: '2026-06-18', overdueDays: 5, priority: 'High', status: 'Completed' },
+  { id: 4, title: 'Database Optimization', project: 'Healthcare Portal', assignee: 'Thomas Wright', originalDueDate: '2026-06-20', overdueDays: 3, priority: 'Medium', status: 'Overdue' }
+];
+
+export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+export const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

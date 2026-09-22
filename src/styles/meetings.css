@@ -1,0 +1,157 @@
+/* src/styles/meetings.css */
+.mtg-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
+.mtg-stat-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; transition: all 0.3s ease; cursor: pointer; }
+.mtg-stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.mtg-stat-content { display: flex; align-items: flex-start; gap: 1rem; }
+.mtg-stat-icon-wrapper { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.mtg-stat-primary .mtg-stat-icon-wrapper { background: rgba(21,156,239,0.1); } .mtg-stat-primary .mtg-stat-icon { color: var(--primary-color); }
+.mtg-stat-info .mtg-stat-icon-wrapper { background: rgba(58,172,241,0.1); } .mtg-stat-info .mtg-stat-icon { color: var(--secondary-color); }
+.mtg-stat-warning .mtg-stat-icon-wrapper { background: rgba(245,158,11,0.1); } .mtg-stat-warning .mtg-stat-icon { color: var(--warning-color); }
+.mtg-stat-success .mtg-stat-icon-wrapper { background: rgba(16,185,129,0.1); } .mtg-stat-success .mtg-stat-icon { color: var(--success-color); }
+.mtg-stat-danger .mtg-stat-icon-wrapper { background: rgba(239,68,68,0.1); } .mtg-stat-danger .mtg-stat-icon { color: var(--danger-color); }
+.mtg-stat-purple .mtg-stat-icon-wrapper { background: rgba(170,124,206,0.1); } .mtg-stat-purple .mtg-stat-icon { color: var(--accent-purple); }
+.mtg-stat-icon { font-size: 1.5rem; }
+.mtg-stat-value { font-size: 1.75rem; font-weight: 700; color: var(--text-dark); margin: 0 0 0.25rem; }
+.mtg-stat-title { color: var(--text-dark); margin: 0 0 0.25rem; font-size: 0.9rem; font-weight: 600; }
+.mtg-stat-desc { font-size: 0.8rem; color: var(--text-muted); }
+
+.filter-section { margin-bottom: 1.5rem; }
+.filter-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.search-box { position: relative; flex: 1; min-width: 250px; }
+.search-box .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.1rem; }
+.search-box .search-input { padding-left: 2.75rem; height: 46px; border: 1px solid var(--border-color); border-radius: 12px; font-size: 0.9rem; }
+.filter-selects { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.filter-selects .form-select { height: 46px; border: 1px solid var(--border-color); border-radius: 12px; font-size: 0.9rem; min-width: 140px; cursor: pointer; }
+.reset-btn { height: 46px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; white-space: nowrap; }
+.view-toggle { display: flex; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; }
+.toggle-btn { padding: 0.625rem 1rem; border: none; background: var(--white-color); color: var(--text-muted); cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; }
+.toggle-btn.active { background: var(--primary-color); color: var(--white-color); }
+
+.meetings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.no-meetings { grid-column: 1 / -1; text-align: center; padding: 3rem; }
+
+.meeting-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; transition: all 0.3s ease; }
+.meeting-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.meeting-card-header { display: flex; justify-content: space-between; margin-bottom: 0.75rem; }
+.meeting-card-actions { display: flex; gap: 0.25rem; }
+.mca-btn { width: 30px; height: 30px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--white-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+.mca-btn:hover { background: rgba(21,156,239,0.1); color: var(--primary-color); border-color: var(--primary-color); }
+.mca-btn.complete:hover { background: rgba(16,185,129,0.1); color: var(--success-color); border-color: var(--success-color); }
+.meeting-title { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+.meeting-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.meeting-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.meeting-meta span { display: flex; align-items: center; gap: 0.3rem; }
+.meeting-project { font-size: 0.8rem; color: var(--primary-color); font-weight: 500; margin-bottom: 0.75rem; }
+.meeting-footer { display: flex; justify-content: space-between; align-items: center; }
+.meeting-footer-stats { display: flex; gap: 0.75rem; font-size: 0.78rem; color: var(--text-muted); }
+.meeting-footer-stats span { display: flex; align-items: center; gap: 0.25rem; }
+
+.meeting-status-badge { padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+.mtg-status-scheduled { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+.mtg-status-ongoing { background: rgba(170,124,206,0.1); color: var(--accent-purple); }
+.mtg-status-completed { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.mtg-status-cancelled { background: rgba(239,68,68,0.1); color: var(--danger-color); }
+.mtg-status-rescheduled { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+
+.meeting-type-badge { padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+.mtg-type-internal { background: rgba(21,156,239,0.1); color: var(--primary-color); }
+.mtg-type-client { background: rgba(16,185,129,0.1); color: var(--success-color); }
+.mtg-type-review { background: rgba(170,124,206,0.1); color: var(--accent-purple); }
+.mtg-type-standup { background: rgba(90,186,243,0.1); color: var(--light-blue); }
+.mtg-type-sprint { background: rgba(245,158,11,0.1); color: var(--warning-color); }
+.mtg-type-demo { background: rgba(58,172,241,0.1); color: var(--secondary-color); }
+.mtg-type-training { background: rgba(107,114,128,0.1); color: var(--text-muted); }
+
+.meetings-table-card { background: var(--white-color); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.5rem; }
+.meetings-table { margin-bottom: 0; }
+.meetings-table thead th { background: var(--card-color); border-bottom: 2px solid var(--border-color); color: var(--text-dark); font-weight: 600; font-size: 0.85rem; padding: 1rem; white-space: nowrap; }
+.meetings-table tbody td { padding: 1rem; vertical-align: middle; font-size: 0.9rem; color: var(--text-muted); }
+.meeting-name-text { font-weight: 600; color: var(--text-dark); }
+.mode-badge { padding: 0.2rem 0.5rem; border-radius: 10px; font-size: 0.72rem; background: var(--card-color); }
+.action-buttons { display: flex; gap: 0.5rem; }
+.action-btn-icon { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--white-color); color: var(--text-muted); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+.action-btn-icon:hover { transform: translateY(-2px); }
+.view-btn:hover { background: rgba(21,156,239,0.1); color: var(--primary-color); border-color: var(--primary-color); }
+.edit-btn:hover { background: rgba(16,185,129,0.1); color: var(--success-color); border-color: var(--success-color); }
+.complete-btn:hover { background: rgba(16,185,129,0.1); color: var(--success-color); border-color: var(--success-color); }
+.delete-btn:hover { background: rgba(239,68,68,0.1); color: var(--danger-color); border-color: var(--danger-color); }
+
+/* Timeline View */
+.timeline-view { margin-bottom: 2rem; }
+.timeline-group { margin-bottom: 2rem; }
+.timeline-group-title { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); }
+.timeline-items { position: relative; padding-left: 2rem; }
+.timeline-items::before { content: ''; position: absolute; left: 1.5rem; top: 0; bottom: 0; width: 2px; background: var(--border-color); }
+.timeline-item { display: flex; gap: 1rem; margin-bottom: 1.25rem; position: relative; }
+.timeline-time { min-width: 70px; font-size: 0.8rem; color: var(--primary-color); font-weight: 600; display: flex; flex-direction: column; }
+.timeline-duration { font-size: 0.7rem; color: var(--text-muted); font-weight: 400; }
+.timeline-dot { position: absolute; left: -0.6rem; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--primary-color); border: 2px solid var(--white-color); z-index: 1; }
+.timeline-card { flex: 1; background: var(--white-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; }
+.timeline-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+.timeline-card-header h6 { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); margin: 0; }
+.timeline-card-meta { display: flex; gap: 0.75rem; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.timeline-card-footer { display: flex; justify-content: space-between; align-items: center; }
+.timeline-location { font-size: 0.7rem; color: var(--text-muted); max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Modal Styles */
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1050; padding: 1rem; }
+.modal-dialog { width: 100%; max-height: 90vh; overflow-y: auto; }
+.modal-content { background: var(--white-color); border: none; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.modal-header { padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; }
+.modal-title { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin: 0; }
+.modal-close-btn { background: none; border: none; font-size: 1.25rem; color: var(--text-muted); cursor: pointer; }
+.modal-body { padding: 1.5rem; }
+.modal-footer { padding: 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 0.75rem; }
+.modal-footer .btn { padding: 0.625rem 1.5rem; border-radius: 10px; font-weight: 600; font-size: 0.9rem; }
+
+.meeting-detail-header { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.meeting-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; font-size: 0.9rem; }
+.meeting-detail-grid div { display: flex; align-items: center; gap: 0.5rem; }
+.meeting-detail-grid svg { color: var(--primary-color); }
+.meeting-detail-sections { display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* Participants */
+.participants-select-grid, .participants-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.participant-chip { padding: 0.4rem 0.85rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.participant-chip.selected { background: var(--primary-color); color: var(--white-color); border-color: var(--primary-color); }
+.participant-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem; background: var(--card-color); border-radius: 10px; min-width: 200px; }
+.participant-avatar { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, var(--primary-color), var(--accent-purple)); color: var(--white-color); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; }
+.participant-info { display: flex; flex-direction: column; }
+.participant-info strong { font-size: 0.85rem; }
+.participant-info span { font-size: 0.72rem; color: var(--text-muted); }
+.participant-status { font-size: 0.65rem !important; font-weight: 600; color: var(--primary-color) !important; }
+
+/* Agenda */
+.meeting-agenda, .meeting-notes, .participant-list { background: var(--card-color); border-radius: 12px; padding: 1.25rem; }
+.meeting-agenda h6, .meeting-notes h6, .participant-list h6 { font-weight: 700; margin-bottom: 0.75rem; }
+.agenda-items { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.75rem; }
+.agenda-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem; cursor: pointer; border-radius: 6px; }
+.agenda-item:hover { background: var(--white-color); }
+.agenda-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.agenda-dot.pending { background: var(--warning-color); }
+.agenda-dot.discussed { background: var(--success-color); }
+.agenda-dot.skipped { background: var(--text-muted); }
+.agenda-text { flex: 1; font-size: 0.85rem; }
+.agenda-status { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); }
+.agenda-remove { background: none; border: none; color: var(--danger-color); cursor: pointer; opacity: 0; transition: opacity 0.2s; }
+.agenda-item:hover .agenda-remove { opacity: 1; }
+.agenda-add, .notes-input { display: flex; gap: 0.5rem; }
+.agenda-input-row { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; }
+.agenda-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.agenda-chip { padding: 0.25rem 0.6rem; background: rgba(21,156,239,0.1); color: var(--primary-color); border-radius: 12px; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.3rem; }
+.agenda-chip button { background: none; border: none; color: var(--danger-color); cursor: pointer; font-size: 0.7rem; padding: 0; }
+
+/* Notes */
+.notes-list { max-height: 150px; overflow-y: auto; margin-bottom: 0.75rem; }
+.note-item { padding: 0.5rem; background: var(--white-color); border-radius: 6px; margin-bottom: 0.5rem; }
+.note-item strong { font-size: 0.8rem; display: block; }
+.note-item p { font-size: 0.8rem; color: var(--text-muted); margin: 0.15rem 0; }
+.note-time { font-size: 0.65rem; color: var(--text-muted); }
+
+.delete-confirmation { text-align: center; }
+.delete-info { background: var(--card-color); padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+
+@media (max-width: 1199px) { .meetings-grid { grid-template-columns: repeat(2, 1fr); } .meeting-detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 991px) { .meetings-grid { grid-template-columns: 1fr; } .filter-row { flex-direction: column; align-items: stretch; } .participants-grid { flex-direction: column; } }
+@media (max-width: 767px) { .timeline-card-header { flex-direction: column; } .timeline-time { min-width: 50px; font-size: 0.7rem; } }
+@media (max-width: 575px) { .filter-selects { flex-direction: column; } .filter-selects .form-select { min-width: 100%; } }

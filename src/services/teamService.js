@@ -1,0 +1,1 @@
+import api from './api'; export const getTeam=(params)=>api.get('/team/',{params}); export const createTeamMember=(data)=>api.post('/team/',data); export const updateTeamMember=(id,data)=>api.put(`/team/${id}/`,data); export const deleteTeamMember=(id)=>api.delete(`/team/${id}/`);

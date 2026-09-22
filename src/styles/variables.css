@@ -1,0 +1,19 @@
+/* src/styles/variables.css */
+:root {
+  --primary-color: #159CEF;
+  --secondary-color: #3AACF1;
+  --light-blue: #5ABAF3;
+  --background-color: #FDFDFD;
+  --card-color: #EEF1F6;
+  --border-color: #C8D6E4;
+  --accent-purple: #AA7CCE;
+  --text-dark: #1F2937;
+  --text-muted: #6B7280;
+  --white-color: #FFFFFF;
+  --success-color: #10B981;
+  --warning-color: #F59E0B;
+  --danger-color: #EF4444;
+  --sidebar-width: 260px;
+  --navbar-height: 70px;
+  --transition-speed: 0.3s;
+}

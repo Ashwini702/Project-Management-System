@@ -1,0 +1,58 @@
+// src/data/teamNotificationsData.js
+export const notificationStatsData = [
+  { id: 1, title: 'Total Notifications', value: 74, icon: 'FiBell', desc: 'All notifications', color: 'primary' },
+  { id: 2, title: 'Unread Notifications', value: 16, icon: 'FiMail', desc: 'Awaiting attention', color: 'warning' },
+  { id: 3, title: 'Task Alerts', value: 22, icon: 'FiCheckSquare', desc: 'Task notifications', color: 'info' },
+  { id: 4, title: 'Deadline Alerts', value: 11, icon: 'FiClock', desc: 'Deadline reminders', color: 'danger' },
+  { id: 5, title: 'Report Reminders', value: 8, icon: 'FiEdit3', desc: 'Daily report alerts', color: 'success' },
+  { id: 6, title: 'Announcements', value: 6, icon: 'FiVolume2', desc: 'Admin & manager', color: 'purple' }
+];
+
+export const notificationTypes = ['Task Assigned', 'Task Updated', 'Deadline Reminder', 'Project Update', 'Daily Report Reminder', 'Attendance Alert', 'Meeting Alert', 'Manager Message', 'Admin Announcement', 'System Notification'];
+export const projects = ['Website Redesign', 'Mobile App UI', 'CRM Development', 'ERP System', 'Cyber Security Audit', 'E-commerce Platform', 'Healthcare Portal'];
+
+export const notifications = [
+  { id: 1, title: 'Task Assigned: Homepage UI', message: 'You have been assigned the Homepage UI Development task for Website Redesign project by Priya Sharma.', type: 'Task Assigned', relatedProject: 'Website Redesign', relatedTo: 'Homepage UI Development', senderName: 'Priya Sharma', senderRole: 'Project Manager', priority: 'High', status: 'Unread', isRead: false, createdAt: '2026-06-24 14:00', actionRequired: 'Start working on the task', notes: '' },
+  { id: 2, title: 'Deadline Reminder: Homepage UI', message: 'Homepage UI Completion deadline is tomorrow (June 25, 2026). Current progress is 65%.', type: 'Deadline Reminder', relatedProject: 'Website Redesign', relatedTo: 'Homepage UI Completion', senderName: 'System', senderRole: 'Auto Reminder', priority: 'Urgent', status: 'Unread', isRead: false, createdAt: '2026-06-24 08:00', actionRequired: 'Complete remaining work', notes: '' },
+  { id: 3, title: 'Daily Report Reminder', message: 'Please submit your daily work report for June 24, 2026. Reports help track productivity.', type: 'Daily Report Reminder', relatedProject: '', relatedTo: 'Daily Report', senderName: 'System', senderRole: 'Auto Reminder', priority: 'Medium', status: 'Unread', isRead: false, createdAt: '2026-06-24 16:30', actionRequired: 'Submit daily report', notes: '' },
+  { id: 4, title: 'Task Updated: Auth Module', message: 'Patricia Garcia has updated the status of User Authentication Module to Under Review.', type: 'Task Updated', relatedProject: 'CRM Development', relatedTo: 'User Authentication Module', senderName: 'Patricia Garcia', senderRole: 'Project Manager', priority: 'Medium', status: 'Read', isRead: true, createdAt: '2026-06-22 16:00', actionRequired: '', notes: '' },
+  { id: 5, title: 'Meeting Alert: Sprint Review', message: 'Sprint review meeting scheduled for June 24 at 4:00 PM. Prepare your demo.', type: 'Meeting Alert', relatedProject: 'Website Redesign', relatedTo: 'Sprint Review Meeting', senderName: 'Priya Sharma', senderRole: 'Project Manager', priority: 'Medium', status: 'Unread', isRead: false, createdAt: '2026-06-23 09:00', actionRequired: 'Prepare demo materials', notes: '' },
+  { id: 6, title: 'Project Update: Website Redesign', message: 'Website Redesign project progress reached 68%. Great work team!', type: 'Project Update', relatedProject: 'Website Redesign', relatedTo: 'Project Progress', senderName: 'System', senderRole: 'Auto Update', priority: 'Low', status: 'Read', isRead: true, createdAt: '2026-06-23 10:00', actionRequired: '', notes: '' },
+  { id: 7, title: 'Attendance Alert: Check-in Reminder', message: 'Please remember to check in when you arrive at the office today.', type: 'Attendance Alert', relatedProject: '', relatedTo: 'Attendance', senderName: 'System', senderRole: 'Auto Reminder', priority: 'Medium', status: 'Important', isRead: true, createdAt: '2026-06-24 08:45', actionRequired: 'Check in', notes: '' },
+  { id: 8, title: 'Manager Message: Great Work', message: 'Priya Sharma sent you a message: Excellent progress on the homepage UI! Keep it up.', type: 'Manager Message', relatedProject: 'Website Redesign', relatedTo: 'Performance', senderName: 'Priya Sharma', senderRole: 'Project Manager', priority: 'Low', status: 'Read', isRead: true, createdAt: '2026-06-23 15:00', actionRequired: '', notes: '' },
+  { id: 9, title: 'Admin Announcement: Server Maintenance', message: 'Scheduled server maintenance on June 25 from 2 AM to 4 AM. Systems may be unavailable.', type: 'Admin Announcement', relatedProject: '', relatedTo: 'Server Maintenance', senderName: 'Admin', senderRole: 'System Admin', priority: 'Medium', status: 'Unread', isRead: false, createdAt: '2026-06-23 11:00', actionRequired: 'Plan accordingly', notes: '' },
+  { id: 10, title: 'Deadline Reminder: Security Patch', message: 'Security Patch Delivery was due on June 15. Task is now 9 days overdue.', type: 'Deadline Reminder', relatedProject: 'Cyber Security Audit', relatedTo: 'Security Patch Delivery', senderName: 'System', senderRole: 'Auto Reminder', priority: 'Urgent', status: 'Important', isRead: true, createdAt: '2026-06-22 08:00', actionRequired: 'Complete immediately', notes: '' },
+  { id: 11, title: 'Task Assigned: SEO Optimization', message: 'You have been assigned SEO Optimization task for Website Redesign by Priya Sharma.', type: 'Task Assigned', relatedProject: 'Website Redesign', relatedTo: 'SEO Optimization', senderName: 'Priya Sharma', senderRole: 'Project Manager', priority: 'Medium', status: 'Read', isRead: true, createdAt: '2026-06-19 10:00', actionRequired: '', notes: '' },
+  { id: 12, title: 'System Notification: Password Expiry', message: 'Your account password will expire in 5 days. Please update your password.', type: 'System Notification', relatedProject: '', relatedTo: 'Account Security', senderName: 'System', senderRole: 'System', priority: 'Medium', status: 'Archived', isRead: true, createdAt: '2026-06-20 09:00', actionRequired: '', notes: '' },
+  { id: 13, title: 'Daily Report Reminder', message: 'Your daily report for June 23 is pending. Please submit before end of day.', type: 'Daily Report Reminder', relatedProject: '', relatedTo: 'Daily Report', senderName: 'System', senderRole: 'Auto Reminder', priority: 'High', status: 'Unread', isRead: false, createdAt: '2026-06-23 17:00', actionRequired: 'Submit pending report', notes: '' },
+  { id: 14, title: 'Project Update: Mobile App UI', message: 'Mobile App UI project progress reached 45%. Navigation design completed.', type: 'Project Update', relatedProject: 'Mobile App UI', relatedTo: 'Project Progress', senderName: 'System', senderRole: 'Auto Update', priority: 'Low', status: 'Read', isRead: true, createdAt: '2026-06-22 14:00', actionRequired: '', notes: '' },
+  { id: 15, title: 'Manager Message: Report Approved', message: 'Emily Davidson approved your daily report for June 21. Great documentation!', type: 'Manager Message', relatedProject: '', relatedTo: 'Daily Report', senderName: 'Emily Davidson', senderRole: 'Project Manager', priority: 'Low', status: 'Read', isRead: true, createdAt: '2026-06-22 10:00', actionRequired: '', notes: '' },
+  { id: 16, title: 'Task Updated: Database Optimization', message: 'Michael Roberts updated Database Schema Optimization status to Blocked.', type: 'Task Updated', relatedProject: 'Healthcare Portal', relatedTo: 'Database Schema Optimization', senderName: 'Michael Roberts', senderRole: 'Project Manager', priority: 'High', status: 'Unread', isRead: false, createdAt: '2026-06-20 11:00', actionRequired: 'Check blocker status', notes: '' },
+  { id: 17, title: 'Admin Announcement: Holiday Notice', message: 'Office will remain closed on June 26 for annual maintenance. Plan your tasks accordingly.', type: 'Admin Announcement', relatedProject: '', relatedTo: 'Holiday', senderName: 'Admin', senderRole: 'System Admin', priority: 'Low', status: 'Unread', isRead: false, createdAt: '2026-06-22 09:00', actionRequired: '', notes: '' },
+  { id: 18, title: 'Meeting Alert: Design Review', message: 'Design review meeting scheduled for June 25 at 2:00 PM with Emily Davidson.', type: 'Meeting Alert', relatedProject: 'Mobile App UI', relatedTo: 'Design Review Meeting', senderName: 'Emily Davidson', senderRole: 'Project Manager', priority: 'Medium', status: 'Read', isRead: true, createdAt: '2026-06-21 10:00', actionRequired: '', notes: '' }
+];
+
+export const reminders = [
+  { id: 1, title: 'Homepage UI Completion', relatedProject: 'Website Redesign', relatedTask: 'Homepage UI Development', reminderDate: '2026-06-24', reminderTime: '09:00', priority: 'High', status: 'Pending' },
+  { id: 2, title: 'API Payment Deadline', relatedProject: 'E-commerce Platform', relatedTask: 'API Payment Integration', reminderDate: '2026-06-25', reminderTime: '10:00', priority: 'Urgent', status: 'Pending' },
+  { id: 3, title: 'Submit Daily Report', relatedProject: '', relatedTask: 'Daily Report', reminderDate: '2026-06-24', reminderTime: '17:00', priority: 'Medium', status: 'Pending' },
+  { id: 4, title: 'Sprint Review Meeting', relatedProject: 'Website Redesign', relatedTask: 'Meeting', reminderDate: '2026-06-24', reminderTime: '15:30', priority: 'Medium', status: 'Sent' },
+  { id: 5, title: 'Cross-Browser Testing', relatedProject: 'Website Redesign', relatedTask: 'Cross-Browser Testing', reminderDate: '2026-06-25', reminderTime: '09:00', priority: 'High', status: 'Pending' },
+  { id: 6, title: 'Check-in Reminder', relatedProject: '', relatedTask: 'Attendance', reminderDate: '2026-06-24', reminderTime: '08:45', priority: 'Medium', status: 'Completed' }
+];
+
+export const announcements = [
+  { id: 1, title: 'Server Maintenance on June 25', message: 'Scheduled maintenance from 2 AM to 4 AM. All systems may be temporarily unavailable.', postedBy: 'Admin', postedRole: 'System Admin', relatedProject: '', dateTime: '2026-06-23 11:00', priority: 'Medium', status: 'Active' },
+  { id: 2, title: 'Office Holiday on June 26', message: 'Office will remain closed for annual maintenance. Plan your tasks accordingly.', postedBy: 'Admin', postedRole: 'System Admin', relatedProject: '', dateTime: '2026-06-22 09:00', priority: 'Low', status: 'Active' },
+  { id: 3, title: 'New Feature: AI Task Suggestions', message: 'AI-powered task suggestions feature is now available. Enable it from your settings.', postedBy: 'Admin', postedRole: 'System Admin', relatedProject: '', dateTime: '2026-06-20 10:00', priority: 'Low', status: 'Active' },
+  { id: 4, title: 'Quarterly Review Next Week', message: 'Quarterly performance review meetings start next week. Prepare your progress summary.', postedBy: 'Priya Sharma', postedRole: 'Project Manager', relatedProject: '', dateTime: '2026-06-19 14:00', priority: 'High', status: 'Active' }
+];
+
+export const notificationSettingsData = {
+  tasks: { taskAssigned: true, taskUpdated: true, taskComment: false, taskDeadline: true, taskReview: true },
+  projects: { projectUpdate: true, fileUpload: false, milestone: true, statusChange: true },
+  deadlines: { todayDeadline: true, upcomingDeadline: true, overdueDeadline: true, reminderAlert: true },
+  attendance: { checkInReminder: true, checkOutReminder: false, dailyReport: true, reportApproval: true },
+  meetings: { meetingScheduled: true, meetingReminder: true, meetingCancelled: true },
+  channels: { system: true, email: true, whatsapp: false }
+};
