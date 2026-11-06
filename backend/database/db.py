@@ -9,7 +9,7 @@ _pool = None
 def get_pool():
     global _pool
     if _pool is None:
-        ca_path = os.path.join(os.path.dirname(__file__), "ca.pem")
+        ca_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ca.pem")
 
         _pool = PooledDB(
             creator=pymysql,
