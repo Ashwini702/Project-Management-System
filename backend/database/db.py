@@ -11,6 +11,9 @@ def get_pool():
     if _pool is None:
         ca_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ca.pem")
 
+        if not os.path.isfile(ca_path):
+    raise FileNotFoundError(f"CA certificate not found: {ca_path}")
+
         _pool = PooledDB(
             creator=pymysql,
             maxconnections=10,
